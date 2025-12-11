@@ -1,0 +1,15 @@
+<% layout('layout') -%>
+<h2>Plans</h2>
+<ul>
+  <% plans.forEach(p=>{ %>
+    <li>
+      <strong><%= p.name %></strong> — ₹<%= p.price %> / <%= p.cycle %> <br/>
+      <%= p.description %><br/>
+      <% if(user){ %>
+        <a href="/buy/<%= p.id %>">Buy</a>
+      <% } else { %>
+        <a href="/auth/login">Login to Buy</a>
+      <% } %>
+    </li>
+  <% }) %>
+</ul>

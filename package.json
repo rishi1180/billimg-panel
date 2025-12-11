@@ -1,0 +1,21 @@
+{
+  "name": "simple-hosting-billing",
+  "version": "1.0.0",
+  "description": "Simple hosting billing panel (demo). Admin + User + Invoices (stubs for payment).",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "init-db": "node scripts/init_db.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^8.0.0",
+    "bcrypt": "^5.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "pdfkit": "^0.13.0",
+    "body-parser": "^1.20.1",
+    "connect-flash": "^0.1.1",
+    "nodemon": "^2.0.22"
+  }
+}

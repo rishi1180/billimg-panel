@@ -1,0 +1,6 @@
+body{ font-family: Arial, sans-serif; max-width:900px; margin:20px auto; padding:10px;}
+header{ display:flex; justify-content:space-between; align-items:center;}
+nav a{ margin-right:10px;}
+.flash{ padding:8px; margin:8px 0;}
+.flash.success{ background:#d4edda;}
+.flash.error{ background:#f8d7da;}

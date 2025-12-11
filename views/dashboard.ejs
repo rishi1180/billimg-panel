@@ -1,0 +1,11 @@
+<% layout('layout') -%>
+<h2>User Dashboard</h2>
+<p>Welcome, <%= user.name %></p>
+<h3>Your Orders</h3>
+<ul>
+  <% orders.forEach(o=>{ %>
+    <li>Order #<%= o.id %> — Plan: <%= o.plan_name %> — Status: <%= o.status %>
+      <a href="/invoice/download/<%= o.id %>">Invoice</a>
+    </li>
+  <% }) %>
+</ul>

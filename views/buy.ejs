@@ -1,0 +1,6 @@
+<% layout('layout') -%>
+<h2>Buy <%= plan.name %></h2>
+<p>Price: ₹<%= plan.price %></p>
+<form method="post" action="/buy/<%= plan.id %>">
+  <button>Place Order (Demo)</button>
+</form>

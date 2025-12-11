@@ -1,0 +1,20 @@
+<% layout('layout') -%>
+<h2>Admin Panel</h2>
+<h3>Users</h3>
+<ul>
+  <% users.forEach(u=>{ %>
+    <li><%= u.email %> — <%= u.name %> — Admin: <%= u.is_admin %></li>
+  <% }) %>
+</ul>
+<h3>Orders</h3>
+<ul>
+  <% orders.forEach(o=>{ %>
+    <li>#<%= o.id %> — <%= o.plan_name %> — User: <%= o.user_email %> — Status: <%= o.status %>
+      <% if(o.status !== 'active'){ %>
+        <form method="post" action="/admin/orders/<%= o.id %>/activate" style="display:inline">
+          <button>Activate</button>
+        </form>
+      <% } %>
+    </li>
+  <% }) %>
+</ul>
